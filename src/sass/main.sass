@@ -13,6 +13,33 @@ body
   font-family: "Open Sans"
   background: #222
 
+.date
+  color: #fff
+  opacity: 0
+
+  font-size: 9pt
+  font-style: italic
+  text-align: right
+  letter-spacing: 1px
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  margin: 265px 0px 0px -425px;
+
+  width: 850px;
+
+  transition: all 1s
+
+  @extend .noselect
+
+  &.loaded
+    opacity: 1
+  
+  em
+    font-weight: bold
+
 .login-window-container
   position: relative
 
@@ -535,41 +562,21 @@ body
     padding-top: 15px
     height: 5%
 
-    .left, .right
+    .left
       color: #fff
       float: left
 
       font-size: 9pt
       letter-spacing: 1px
 
-      width: 30%
-
     .left
       font-weight: bold
+      width: 30%
 
       @extend .noselect
 
       &:hover
         cursor: pointer
-
-    .right
-      position: relative
-      top: 40px
-      right: -245px
-
-      font-style: italic
-      text-align: right
-      transition: all 1s
-
-      opacity: 0
-
-      @extend .noselect
-
-      &.loaded
-        opacity: 1
-      
-      em
-        font-weight: bold
 
 
 .notifications-container
